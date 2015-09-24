@@ -1,0 +1,30 @@
+#-------------------------------------------------
+#
+# Project created by QtCreator 2015-09-18T13:42:03
+#
+#-------------------------------------------------
+
+QT       += core gui
+
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+TARGET = Qt_cardiac_viewer
+TEMPLATE = app
+
+
+SOURCES += main.cpp\
+    dicomreader.cpp \
+    ensite_viewer.cpp \
+    mr_dcmimg_reader.cpp \
+    raw_data_reader.cpp \
+    CardiacViewer.cpp
+
+HEADERS  += \
+    dicomreader.h \
+    ensite_viewer.h \
+    mr_dcmimage_reader.h \
+    raw_data_reader.h \
+    CardiacViewer.h
+
+FORMS    += \
+    CardiacViewer.ui
