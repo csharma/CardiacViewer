@@ -1,0 +1,30 @@
+#include "CardiacViewer.h"
+#include "ui_mainwindow.h"
+#include <QGraphicsView>
+
+#include <QGraphicsScene>
+
+#include <dicomReader.h>
+
+const int n = 50;
+
+CardiacViewer::CardiacViewer(QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::MainWindow)
+{
+    ui->setupUi(this);
+}
+
+CardiacViewer::~CardiacViewer()
+{
+    delete ui;
+}
+
+void CardiacViewer::on_actionLoad_MRI_data_triggered()
+{
+    DicomReader* dicom;
+    int img[512][512][n];
+
+    imgViewer = dicom->loadDicomReader(img);
+
+}
